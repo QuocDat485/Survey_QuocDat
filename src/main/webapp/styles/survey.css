@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 100px;
+    margin-bottom: 12px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #1e88e5;
+    font-weight: 600;
+}
+
+form h1 {
+    text-align: center;
+    color: #00695c;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+form h2 {
+    margin: 25px 0 12px;
+    color: #1976d2;
+    font-size: 18px;
+    font-weight: 600;
+    border-left: 4px solid #1976d2;
+    padding-left: 10px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fafafa;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+    background-color: #fff;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.option {
+    background: #e8f0fe;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #bbdefb;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    background: #d1e3ff;
+    border-color: #1976d2;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.checkbox-option {
+    background: #e8f0fe;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #bbdefb;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox-option:hover {
+    background: #d1e3ff;
+    border-color: #1976d2;
+}
+
+.contact-text {
+    font-weight: 600;
+    font-size: 16px; /* Tăng kích thước chữ lên 16px */
+    color: #34495e;
+    margin-top: 15px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #1976d2, #2196f3);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #1565c0, #1976d2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
