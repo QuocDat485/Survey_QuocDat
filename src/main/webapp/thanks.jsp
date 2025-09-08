@@ -142,6 +142,7 @@
                 <li><strong>Last Name:</strong> ${user.lastName}</li>
                 <li><strong>Email:</strong> ${user.email}</li>
                 <li><strong>Date of Birth:</strong> ${user.dob}</li>
+                <li><strong>Gender:</strong> ${user.gender}</li>
             </ul>
         </section>
 
@@ -151,7 +152,10 @@
                 <li><strong>How did you hear about us?</strong> ${user.heardFrom}</li>
                 <li><strong>Receive updates:</strong> ${user.wantsUpdates}</li>
                 <li><strong>Email announcements:</strong> ${user.emailAnnouncements}</li>
-                <li><strong>Preferred contact:</strong> ${user.contactVia}</li>
+                <c:if test="${user.wantsUpdates == 'Yes'}">
+                    <li><strong>Contact Via:</strong> ${user.contactVia}</li>
+                </c:if>
+                <li><strong>Feedback:</strong> ${user.feedback}</li>
             </ul>
         </section>
 

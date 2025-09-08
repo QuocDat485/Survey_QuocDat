@@ -18,19 +18,21 @@ public class SurveyServlet extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
         String dob = request.getParameter("dob");
+        String gender = request.getParameter("gender");
         String heardFrom = request.getParameter("heardFrom");
-        String contactVia = request.getParameter("contactVia");
+        String contactVia = request.getParameter("contactVia") != null ? request.getParameter("contactVia") : "";
         String wantsUpdates = request.getParameter("wantsUpdates") != null ? "Yes" : "No";
         String emailAnnouncements = request.getParameter("emailAnnouncements") != null ? "Yes" : "No";
+        String feedback = request.getParameter("feedback");
 
-     // Tạo object UserSurvey
+        // Tạo object UserSurvey
         UserSurvey user = new UserSurvey(firstName, lastName, email, dob,
-                                         heardFrom, contactVia,
-                                         wantsUpdates, emailAnnouncements);
+                                        gender, heardFrom, contactVia,
+                                        wantsUpdates, emailAnnouncements, feedback);
 
         // Gửi object sang JSP
         request.setAttribute("user", user);
-        // Chuyển hướng sang trang cảm ơn
+        // Chuyển hướng sang trang thanks.jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("thanks.jsp");
         dispatcher.forward(request, response);
     }
